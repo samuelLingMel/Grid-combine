@@ -1,0 +1,53 @@
+Make a function which accepts a grid and a material grid and will either output a grid where both are combined or why they can't be combined.
+
+Both grid and material grid will be a 4x4 grid. In the format of a list with four lists of strings(with the name of the node they contain)
+
+Input examples
+Empty
+[
+  ["","","",""],
+  ["","","",""],
+  ["","","",""],
+  ["","","",""]
+]
+
+Grid
+[
+  ["metal","ruby","",""],
+  ["","ruby","",""],
+  ["","","",""],
+  ["","","",""]
+]
+Material Grid
+[
+  ["","","ruby",""],
+  ["","","ruby",""],
+  ["","","ruby",""],
+  ["","","ruby",""]
+]
+
+Returns
+[
+  ["metal","ruby","ruby",""],
+  ["","ruby","ruby",""],
+  ["","","ruby",""],
+  ["","","ruby",""]
+]
+
+Grid
+[
+  ["metal","ruby","",""],
+  ["","ruby","",""],
+  ["","","",""],
+  ["","","",""]
+]
+Material Grid
+[
+  ["metal","ruby","ruby",""],
+  ["","ruby","ruby",""],
+  ["","","ruby",""],
+  ["","","ruby",""]
+]
+
+Returns a string that says "Can't combine due to overlap"
+
