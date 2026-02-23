@@ -51,3 +51,5 @@ Material Grid
 
 Returns a string that says "Can't combine due to overlap"
 
+Bonus would be to update the function to accept grid a material grid and a coordinate.
+Grid will still be a 4x4 grid, but material grid could be a 1x1 to a 4x4 grid. The coordinate would be where on the grid the top left of the material grid will go. New error would be if the material can't fit because it hangs off of the grid.
