@@ -1,0 +1,43 @@
+def grid_combine(grid, material):
+    matNonBlank = []
+# # get all coordinates of non-blank elements of input grid as [[x1,y1], [x2,y2],...]
+# #     Loop over grid by row then column, 
+# #     if element is '' 
+# #          then store x,y coordinates
+    for x in range(0,4):
+     for y in range(0,4):
+        if not(material[x][y] == ''):
+            matNonBlank.append([x,y])
+    
+    gridNonBlank = []
+    for x in range(0,4):
+     for y in range(0,4):
+        if not(grid[x][y] == ''):
+            gridNonBlank.append([x,y])
+            
+    overlapCoords = []
+    for x in matNonBlank:
+        for y in gridNonBlank:
+            if x == y:
+                overlapCoords.append(x)
+# # If any coordinates overlap, return error message with overlapping coordinates            
+    if len(overlapCoords) > 0:
+        result = []
+        for i in overlapCoords:
+             result.append(i)
+        return(f"Can't combine due to overlap at {result}")
+# # create new empty list named combined
+# # loop over first row of grid and material
+# # for each element, combine the two (eg: e1+e2) into one and append this to combined
+    else: 
+        combined = []
+        for x in range(0,4):
+            result = []
+            for y in range(0,4):
+            #     print(f"row {x}, col {y}")
+            #     print(grid[y][x]+material[y][x])
+                result.append(grid[x][y]+material[x][y])
+            # print(result)
+            combined.append(result)
+        return combined
+print(grid_combine(grid,mat2))
